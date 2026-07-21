@@ -221,10 +221,21 @@ justify-content:flex-start;
 
 .navbar{
 height:auto;
-padding:25px 20px;
+padding:20px;
+gap:15px;
 }
 
 .nav-links{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+font-size:13px;
+}
+
+.nav-button{
 display:none;
 }
 
