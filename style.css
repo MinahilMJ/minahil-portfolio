@@ -40,6 +40,7 @@ font-size:28px;
 font-weight:bold;
 color:var(--blue);
 letter-spacing:2px;
+text-decoration:none;
 }
 
 .logo span{
@@ -219,28 +220,16 @@ justify-content:flex-start;
 @media(max-width:600px){
 
 .navbar{
-height:70px;
-display:flex;
-padding:0 20px;
-}
-
-.logo{
-display:block;
-font-size:24px;
-}
-
-.nav-actions{
-display:flex;
-}
-
-.theme-toggle{
-display:block;
+height:auto;
+padding:25px 20px;
 }
 
 .nav-links{
 display:none;
 }
 
+.logo{
+font-size:24px;
 }
 
 main{
@@ -1212,7 +1201,4 @@ grid-template-columns:1fr;
 gap:20px;
 }
 
-}
-.logo{
-text-decoration:none;
 }
