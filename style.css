@@ -219,16 +219,28 @@ justify-content:flex-start;
 @media(max-width:600px){
 
 .navbar{
-height:auto;
-padding:25px 20px;
+height:70px;
+display:flex;
+padding:0 20px;
+}
+
+.logo{
+display:block;
+font-size:24px;
+}
+
+.nav-actions{
+display:flex;
+}
+
+.theme-toggle{
+display:block;
 }
 
 .nav-links{
 display:none;
 }
 
-.logo{
-font-size:24px;
 }
 
 main{
@@ -1200,4 +1212,7 @@ grid-template-columns:1fr;
 gap:20px;
 }
 
+}
+.logo{
+text-decoration:none;
 }
