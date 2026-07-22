@@ -1243,3 +1243,33 @@ border-radius:50%;
 border:2px solid var(--blue);
 margin-bottom:20px;
 }
+
+.back-button,
+.back-to-top{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:12px 18px;
+border:1px solid var(--border);
+background:var(--background-secondary);
+color:var(--text-primary);
+font-size:13px;
+text-decoration:none;
+letter-spacing:.5px;
+transition:.3s ease;
+}
+
+.back-button{
+margin:40px 0 20px 40px;
+}
+
+.back-to-top{
+margin:0 0 40px 40px;
+}
+
+.back-button:hover,
+.back-to-top:hover{
+border-color:var(--accent);
+color:var(--accent);
+transform:translateY(-3px);
+}
