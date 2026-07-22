@@ -25,6 +25,9 @@ font-family:"Times New Roman",serif;
 }
 
 .navbar{
+position:sticky;
+top:0;
+z-index:1000;
 height:80px;
 display:flex;
 align-items:center;
@@ -32,6 +35,7 @@ justify-content:space-between;
 max-width:1200px;
 margin:auto;
 padding:0 40px;
+background:var(--background);
 border-bottom:1px solid var(--border);
 }
 
