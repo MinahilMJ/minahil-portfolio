@@ -391,7 +391,7 @@ color:var(--text-secondary);
 }
 
 .about-card-content{
-width:min(220px,70%);
+width:min(280px,80%);
 aspect-ratio:1;
 margin:20px auto;
 border-radius:50%;
