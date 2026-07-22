@@ -18,3 +18,18 @@ localStorage.setItem("theme","dark");
 themeToggle.textContent="☀";
 }
 });
+
+document.querySelectorAll('a[href^="projects/"]').forEach(link=>{
+link.addEventListener("click",()=>{
+sessionStorage.setItem("scrollPosition",window.scrollY);
+});
+});
+
+window.addEventListener("load",()=>{
+const scrollPosition=sessionStorage.getItem("scrollPosition");
+
+if(scrollPosition){
+window.scrollTo(0,parseInt(scrollPosition));
+sessionStorage.removeItem("scrollPosition");
+}
+});
