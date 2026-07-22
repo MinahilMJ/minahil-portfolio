@@ -19,12 +19,13 @@ themeToggle.textContent="☀";
 }
 });
 
-document.querySelectorAll('a[href^="projects/"]').forEach(link=>{
+document.querySelectorAll('a[href^="projects/"],a[href*="github.com"]').forEach(link=>{
 link.addEventListener("click",()=>{
 sessionStorage.setItem("scrollPosition",window.scrollY);
 });
 });
 
+if(window.location.pathname.endsWith("index.html")||window.location.pathname==="/"){
 window.addEventListener("load",()=>{
 const scrollPosition=sessionStorage.getItem("scrollPosition");
 
@@ -33,3 +34,4 @@ window.scrollTo(0,parseInt(scrollPosition));
 sessionStorage.removeItem("scrollPosition");
 }
 });
+}
