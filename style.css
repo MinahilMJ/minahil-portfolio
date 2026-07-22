@@ -1302,3 +1302,156 @@ transition:all .3s ease;
 color:#00aaff;
 text-shadow:0 0 10px rgba(0,170,255,.8),0 0 20px rgba(0,170,255,.5);
 }
+
+.project-page{
+max-width:1000px;
+margin:0 auto;
+padding:30px 30px 80px;
+}
+
+.project-hero{
+padding-bottom:25px;
+}
+
+.project-hero .section-label{
+margin:0 0 12px;
+}
+
+.project-hero h1{
+margin:0 0 20px;
+font-size:clamp(48px,8vw,90px);
+line-height:.95;
+}
+
+.project-intro{
+max-width:700px;
+margin:0 0 25px;
+line-height:1.7;
+}
+
+.project-tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:35px;
+}
+
+.project-tags span{
+padding:7px 12px;
+border:1px solid var(--border);
+border-radius:4px;
+font-size:12px;
+color:var(--text-secondary);
+}
+
+.project-details{
+padding-top:25px;
+}
+
+.project-detail-block{
+display:grid;
+grid-template-columns:220px 1fr;
+gap:50px;
+padding:25px 0;
+border-top:1px solid var(--border);
+}
+
+.detail-label{
+margin:0;
+align-self:center;
+font-weight:700;
+color:var(--text-secondary);
+}
+
+.detail-content{
+margin:0;
+}
+
+.detail-content p{
+margin:0 0 15px;
+}
+
+.detail-content p:last-child{
+margin-bottom:0;
+}
+
+.detail-content ul{
+margin:0;
+padding-left:20px;
+}
+
+.detail-content li{
+margin-bottom:8px;
+}
+
+.technology-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.technology-grid strong{
+display:block;
+margin-bottom:5px;
+font-size:13px;
+color:var(--text-primary);
+}
+
+.technology-grid p{
+margin:0;
+color:var(--text-secondary);
+}
+
+.back-projects-link{
+display:inline-flex;
+align-items:center;
+margin-top:35px;
+padding:12px 20px;
+border:1px solid var(--border);
+border-radius:6px;
+background:var(--background-secondary);
+color:var(--text-primary);
+text-decoration:none;
+font-size:14px;
+transition:all .3s ease;
+}
+
+.back-projects-link:hover{
+border-color:var(--accent);
+color:var(--accent);
+box-shadow:0 0 18px var(--accent);
+transform:translateY(-2px);
+}
+
+@media(max-width:700px){
+
+.project-page{
+padding:25px 20px 60px;
+}
+
+.project-detail-block{
+display:block;
+padding:22px 0;
+}
+
+.detail-label{
+margin-bottom:12px;
+}
+
+.technology-grid{
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.project-hero h1{
+font-size:clamp(42px,6vw,80px);
+}
+
+}
+
+.project-hero .project-tags span{
+border-color:var(--accent);
+color:var(--accent);
+background:rgba(0,180,255,.08);
+box-shadow:0 0 10px rgba(0,180,255,.15);
+}
