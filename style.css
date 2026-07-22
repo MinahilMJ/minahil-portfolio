@@ -385,8 +385,10 @@ color:var(--text-secondary);
 }
 
 .about-card-content{
-width:100%;
-height:280px;
+width:min(220px,70%);
+aspect-ratio:1;
+margin:20px auto;
+border-radius:50%;
 overflow:hidden;
 }
 
