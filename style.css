@@ -1311,6 +1311,7 @@ padding:30px 30px 80px;
 
 .project-hero{
 padding-bottom:25px;
+border-bottom:none;
 }
 
 .project-hero .section-label{
@@ -1345,14 +1346,14 @@ color:var(--text-secondary);
 }
 
 .project-details{
-padding-top:25px;
+padding-top:0;
 }
 
 .project-detail-block{
 display:grid;
 grid-template-columns:220px 1fr;
 gap:50px;
-padding:25px 0;
+padding:10px 0;
 border-top:1px solid var(--border);
 }
 
