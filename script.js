@@ -19,29 +19,31 @@ themeToggle.textContent="☀";
 }
 });
 
+
 document.querySelectorAll('a[href^="projects/"],a[href*="github.com"]').forEach(link=>{
 link.addEventListener("click",()=>{
 sessionStorage.setItem("scrollPosition",window.scrollY);
 });
 });
 
+
 if(window.location.pathname.endsWith("index.html")||window.location.pathname==="/"){
+
 window.addEventListener("load",()=>{
+
 const scrollPosition=sessionStorage.getItem("scrollPosition");
 
 if(scrollPosition){
+
 window.scrollTo(0,parseInt(scrollPosition));
+
 sessionStorage.removeItem("scrollPosition");
-}
-});
+
 }
 
-const menuToggle=document.getElementById("menu-toggle");
-const navLinks=document.getElementById("nav-links");
-
-menuToggle.addEventListener("click",()=>{
-navLinks.classList.toggle("active");
 });
+
+}
 
 
 const contactForm=document.getElementById("contact-form");
@@ -61,11 +63,15 @@ submitButton.textContent="Sending...";
 try{
 
 const response=await fetch(contactForm.action,{
+
 method:"POST",
+
 body:new FormData(contactForm),
+
 headers:{
 "Accept":"application/json"
 }
+
 });
 
 if(response.ok){
@@ -79,6 +85,7 @@ submitButton.textContent="Message Sent";
 }else{
 
 submitButton.disabled=false;
+
 submitButton.textContent="Send Message →";
 
 alert("Something went wrong. Please try again.");
@@ -88,6 +95,7 @@ alert("Something went wrong. Please try again.");
 }catch(error){
 
 submitButton.disabled=false;
+
 submitButton.textContent="Send Message →";
 
 alert("Something went wrong. Please try again.");
