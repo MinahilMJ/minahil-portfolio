@@ -1812,19 +1812,23 @@ transform:translateY(-3px);
 box-shadow:0 0 15px rgba(0,170,255,.8),0 0 35px rgba(0,170,255,.5);
 }
 
+.form-submit{
+display:flex;
+align-items:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
 .form-success{
 display:none;
-margin:10px 0 0;
+margin:0;
 padding:10px 15px;
 border:1px solid var(--blue);
 color:var(--blue);
 background:var(--background-secondary);
 font-size:16px;
-text-align:center;
-width:max-content;
-max-width:90%;
 }
 
 .form-success.show{
-display:inline-block;
+display:block;
 }
