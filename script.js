@@ -43,6 +43,7 @@ menuToggle.addEventListener("click",()=>{
 navLinks.classList.toggle("active");
 });
 
+
 const contactForm=document.getElementById("contact-form");
 const successMessage=document.getElementById("form-success");
 
@@ -52,18 +53,16 @@ contactForm.addEventListener("submit",async function(event){
 
 event.preventDefault();
 
-const submitButton=contactForm.querySelector("button[type='submit']");
+const submitButton=contactForm.querySelector(".contact-submit");
 
 submitButton.disabled=true;
 submitButton.textContent="Sending...";
-
-const formData=new FormData(contactForm);
 
 try{
 
 const response=await fetch(contactForm.action,{
 method:"POST",
-body:formData,
+body:new FormData(contactForm),
 headers:{
 "Accept":"application/json"
 }
