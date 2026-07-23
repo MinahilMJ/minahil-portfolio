@@ -58,6 +58,7 @@ event.preventDefault();
 const submitButton=contactForm.querySelector(".contact-submit");
 
 submitButton.disabled=true;
+
 submitButton.textContent="Sending...";
 
 try{
@@ -81,6 +82,16 @@ contactForm.reset();
 successMessage.style.display="block";
 
 submitButton.textContent="Message Sent";
+
+setTimeout(()=>{
+
+successMessage.style.display="none";
+
+submitButton.disabled=false;
+
+submitButton.textContent="Send Message →";
+
+},5000);
 
 }else{
 
