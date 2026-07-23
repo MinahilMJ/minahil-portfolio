@@ -79,13 +79,13 @@ if(response.ok){
 
 contactForm.reset();
 
-successMessage.style.display="block";
+successMessage.classList.add("show");
 
 submitButton.textContent="Message Sent";
 
 setTimeout(()=>{
 
-successMessage.style.display="none";
+successMessage.classList.remove("show");
 
 submitButton.disabled=false;
 
