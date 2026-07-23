@@ -91,7 +91,7 @@ submitButton.disabled=false;
 
 submitButton.textContent="Send Message →";
 
-},2000);
+},3000);
 
 }else{
 
