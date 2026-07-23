@@ -42,3 +42,59 @@ const navLinks=document.getElementById("nav-links");
 menuToggle.addEventListener("click",()=>{
 navLinks.classList.toggle("active");
 });
+
+const contactForm=document.getElementById("contact-form");
+const successMessage=document.getElementById("form-success");
+
+if(contactForm){
+
+contactForm.addEventListener("submit",async function(event){
+
+event.preventDefault();
+
+const submitButton=contactForm.querySelector("button[type='submit']");
+
+submitButton.disabled=true;
+submitButton.textContent="Sending...";
+
+const formData=new FormData(contactForm);
+
+try{
+
+const response=await fetch(contactForm.action,{
+method:"POST",
+body:formData,
+headers:{
+"Accept":"application/json"
+}
+});
+
+if(response.ok){
+
+contactForm.reset();
+
+successMessage.style.display="block";
+
+submitButton.textContent="Message Sent";
+
+}else{
+
+submitButton.disabled=false;
+submitButton.textContent="Send Message →";
+
+alert("Something went wrong. Please try again.");
+
+}
+
+}catch(error){
+
+submitButton.disabled=false;
+submitButton.textContent="Send Message →";
+
+alert("Something went wrong. Please try again.");
+
+}
+
+});
+
+}
